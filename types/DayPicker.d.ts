@@ -23,5 +23,5 @@ export default class DayPicker extends React.Component<DayPickerProps, any> {
   showNextMonth(): void;
   showPreviousYear(): void;
   showNextYear(): void;
-  renderMonths(): React.ReactElement<any> | null;
+  renderMonths(): React.ReactElement<any>[] | null;
 }
