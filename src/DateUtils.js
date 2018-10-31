@@ -26,10 +26,15 @@ export function isDate(value) {
  * @export
  * @param {[type]} d
  * @param {[type]} n
+ * @param {boolean} forceNextMonthFirstDay
  */
-export function addMonths(d, n) {
+export function addMonths(d, n, forceNextMonthFirstDay = false) {
   const newDate = clone(d);
-  newDate.setMonth(d.getMonth() + n);
+  if (forceNextMonthFirstDay) {
+    newDate.setMonth(d.getMonth() + n, 1);
+  } else {
+    newDate.setMonth(d.getMonth() + n);
+  }
   return newDate;
 }
 

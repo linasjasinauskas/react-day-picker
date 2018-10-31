@@ -511,7 +511,7 @@ export class DayPicker extends Component {
     const months = [];
     const firstDayOfWeek = Helpers.getFirstDayOfWeekFromProps(this.props);
     for (let i = 0; i < this.props.numberOfMonths; i += 1) {
-      const month = DateUtils.addMonths(this.state.currentMonth, i);
+      const month = DateUtils.addMonths(this.state.currentMonth, i, true);
       months.push(
         <Month
           key={i}
